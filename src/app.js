@@ -16,6 +16,9 @@ app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Jai Shree Ram");
+});
 app.use("/api/files", require("./routes/filesRoute.js"));
 
 // middleware for any Unhandled Error:
